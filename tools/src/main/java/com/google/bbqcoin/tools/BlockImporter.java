@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.litecoin.tools;
+package com.google.bbqcoin.tools;
 
-import com.google.litecoin.core.Block;
-import com.google.litecoin.core.FullPrunedBlockChain;
-import com.google.litecoin.core.NetworkParameters;
-import com.google.litecoin.core.Utils;
-import com.google.litecoin.store.FullPrunedBlockStore;
-import com.google.litecoin.store.H2FullPrunedBlockStore;
+import com.google.bbqcoin.core.Block;
+import com.google.bbqcoin.core.FullPrunedBlockChain;
+import com.google.bbqcoin.core.NetworkParameters;
+import com.google.bbqcoin.core.Utils;
+import com.google.bbqcoin.store.FullPrunedBlockStore;
+import com.google.bbqcoin.store.H2FullPrunedBlockStore;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -40,9 +40,9 @@ public class BlockImporter {
         
         String defaultDataDir;
         if (System.getProperty("os.name").toLowerCase().indexOf("win") >= 0) {
-            defaultDataDir = System.getenv("APPDATA") + "\\.litecoin/";
+            defaultDataDir = System.getenv("APPDATA") + "\\.bbqcoin/";
         } else {
-            defaultDataDir = System.getProperty("user.home") + "/.litecoin/";
+            defaultDataDir = System.getProperty("user.home") + "/.bbqcoin/";
         }
         
         // TODO: Move this to a library function

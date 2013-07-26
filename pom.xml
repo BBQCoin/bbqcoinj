@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.google</groupId>
-  <artifactId>litecoinj-parent</artifactId>
-  <version>0.81-SNAPSHOT</version>
+  <artifactId>bbqcoinj-parent</artifactId>
+  <version>0.82-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -13,9 +13,9 @@
     <module>tools</module>
   </modules>
 
-  <name>litecoinj Parent</name>
+  <name>bbqcoinj Parent</name>
   <description>Provides the common configuration for the LitecoinJ modules</description>
-  <url>http://code.google.com/p/litecoinj</url>
+  <url>http://code.google.com/p/bbqcoinj</url>
 
   <licenses>
     <license>
@@ -102,18 +102,18 @@
 
   <issueManagement>
     <system>Google Code</system>
-    <url>http://code.google.com/p/litecoinj/issues/list</url>
+    <url>http://code.google.com/p/bbqcoinj/issues/list</url>
   </issueManagement>
 
   <mailingLists>
     <mailingList>
-      <name>litecoinj Google Group</name>
-      <post>https://groups.google.com/forum/#!forum/litecoinj</post>
+      <name>bbqcoinj Google Group</name>
+      <post>https://groups.google.com/forum/#!forum/bbqcoinj</post>
     </mailingList>
   </mailingLists>
 
   <scm>
-    <url>http://code.google.com/p/litecoinj/source/checkout</url>
+    <url>http://code.google.com/p/bbqcoinj/source/checkout</url>
   </scm>
 
   <!-- Common build plugin configuration -->
@@ -156,7 +156,7 @@
         <artifactId>slf4j-api</artifactId>
         <version>${slf4j.version}</version>
       </dependency>
-      <!-- litecoinj consumers are expected to provide their own SLF4J adapters
+      <!-- bbqcoinj consumers are expected to provide their own SLF4J adapters
     such as logback, slf4j-log4j12, slf4j-jcl and so on
     see http://www.slf4j.org/faq.html -->
       <dependency>

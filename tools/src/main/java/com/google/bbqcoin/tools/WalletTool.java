@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.google.litecoin.tools;
+package com.google.bbqcoin.tools;
 
-import com.google.litecoin.core.*;
-import com.google.litecoin.crypto.KeyCrypterException;
-import com.google.litecoin.discovery.DnsDiscovery;
-import com.google.litecoin.discovery.IrcDiscovery;
-import com.google.litecoin.discovery.PeerDiscovery;
-import com.google.litecoin.store.*;
-import com.google.litecoin.utils.BriefLogFormatter;
+import com.google.bbqcoin.core.*;
+import com.google.bbqcoin.crypto.KeyCrypterException;
+import com.google.bbqcoin.discovery.DnsDiscovery;
+import com.google.bbqcoin.discovery.IrcDiscovery;
+import com.google.bbqcoin.discovery.PeerDiscovery;
+import com.google.bbqcoin.store.*;
+import com.google.bbqcoin.utils.BriefLogFormatter;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 import joptsimple.util.DateConverter;
-import org.litecoinj.wallet.Protos;
+import org.bbqcoinj.wallet.Protos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.util.encoders.Hex;
@@ -282,7 +282,7 @@ public class WalletTool {
             case TEST: 
                 params = NetworkParameters.testNet();
                 chainFileName = new File("testnet.chain");
-                discovery = new IrcDiscovery("#litecoinTEST3");
+                discovery = new IrcDiscovery("#bbqcoinTEST3");
                 break;
             default:
                 throw new RuntimeException("Unreachable.");
@@ -444,7 +444,7 @@ public class WalletTool {
                 req.aesKey = wallet.getKeyCrypter().deriveKey(password);
             }
             if (!wallet.completeTx(req)) {
-                System.err.println("Insufficient funds: have " + Utils.litecoinValueToFriendlyString(wallet.getBalance()));
+                System.err.println("Insufficient funds: have " + Utils.bbqcoinValueToFriendlyString(wallet.getBalance()));
                 return;
             }
             try {
@@ -545,7 +545,7 @@ public class WalletTool {
                         saveWallet(walletFile);
                         BigInteger balance = wallet.getBalance(Wallet.BalanceType.ESTIMATED);
                         if (condition.matchLitecoins(balance)) {
-                            System.out.println(Utils.litecoinValueToFriendlyString(balance));
+                            System.out.println(Utils.bbqcoinValueToFriendlyString(balance));
                             latch.countDown();
                         }
                     }

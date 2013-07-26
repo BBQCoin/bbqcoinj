@@ -1,9 +1,9 @@
-package com.google.litecoin.tools;
+package com.google.bbqcoin.tools;
 
-import com.google.litecoin.core.*;
-import com.google.litecoin.store.BlockStore;
-import com.google.litecoin.store.MemoryBlockStore;
-import com.google.litecoin.utils.BriefLogFormatter;
+import com.google.bbqcoin.core.*;
+import com.google.bbqcoin.store.BlockStore;
+import com.google.bbqcoin.store.MemoryBlockStore;
+import com.google.bbqcoin.utils.BriefLogFormatter;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -27,7 +27,7 @@ public class BuildCheckpoints {
         // Sorted map of UNIX time of block to StoredBlock object.
         final TreeMap<Integer, StoredBlock> checkpoints = new TreeMap<Integer, StoredBlock>();
 
-        // Configure litecoinj to fetch only headers, not save them to disk, connect to a local fully synced/validated
+        // Configure bbqcoinj to fetch only headers, not save them to disk, connect to a local fully synced/validated
         // node and to save block headers that are on interval boundaries, as long as they are before the time boundary
         final BlockStore store = new MemoryBlockStore(params);
         final BlockChain chain = new BlockChain(params, store);
@@ -56,7 +56,7 @@ public class BuildCheckpoints {
         checkState(checkpoints.size() > 0);
 
         // Write checkpoint data out.
-        final FileOutputStream fileOutputStream = new FileOutputStream("checkpoints", false);
+        final FileOutputStream fileOutputStream = new FileOutputStream("bbqcoin-checkpoints", false);
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         final DigestOutputStream digestOutputStream = new DigestOutputStream(fileOutputStream, digest);
         digestOutputStream.on(false);
