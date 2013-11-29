@@ -52,8 +52,7 @@ public class DnsDiscovery implements PeerDiscovery {
     private NetworkParameters netParams;
 
     public static final String[] defaultHosts = new String[]{
-            "dnsseed.bbq.cryptocoinexplorer.com",
-            "dnsseed.bbqabe.rainbowdashh.tk"
+            "bbq.dnsseed01.bbqcoin.darkgamex.ch"
     };
 
     /**
