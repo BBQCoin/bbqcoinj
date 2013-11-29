@@ -145,14 +145,14 @@ public class NetworkParameters implements Serializable {
             acceptableAddressCodes = new int[] { 48 }; // FC
             dumpedPrivateKeyHeader = 128;
             addressHeader = 48;
-            port = 59332; // BBQ
+            port = 19323; // BBQ
             packetMagic = 0xfbc0b6db; // BBQ, pchMessageStart
             genesisBlock.setDifficultyTarget(0x1e0ffff0L); // BBQ, nBits
             genesisBlock.setTime(1317972665L); // BBQ, nTime
             genesisBlock.setNonce(2085733839L); // BBQ, nNonce
             genesisBlock.setMerkleRoot(new Sha256Hash("88f28daf21ef9f2f9c40fbeb2860b1e06d169b986e1ecc703fcaba74e2ac1825")); // BBQ
             id = ID_PRODNET;
-            subsidyDecreaseBlockCount = 24000000; // BBQ
+            subsidyDecreaseBlockCount = 2400000; // BBQ
             allowEmptyPeerChains = false;
             spendableCoinbaseDepth = 10; // BBQ
             String genesisHash = genesisBlock.getHashAsString();
@@ -292,7 +292,7 @@ public class NetworkParameters implements Serializable {
     /**
      * The maximum money to be generated
      */
-    public static final BigInteger MAX_MONEY = new BigInteger("4200000000", 10).multiply(COIN); // BBQ
+    public static final BigInteger MAX_MONEY = new BigInteger("201600000", 10).multiply(COIN); // BBQ
 
     /** Returns whatever the latest testNet parameters are.  Use this rather than the versioned equivalents. */
     public static NetworkParameters testNet() {
