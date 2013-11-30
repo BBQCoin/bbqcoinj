@@ -142,9 +142,9 @@ public class NetworkParameters implements Serializable {
             interval = INTERVAL;
             targetTimespan = TARGET_TIMESPAN;
             proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL); // FC
-            acceptableAddressCodes = new int[] { 48 }; // FC
+            acceptableAddressCodes = new int[] { 85 }; // FC
             dumpedPrivateKeyHeader = 128;
-            addressHeader = 48;
+            addressHeader = 85;
             port = 19323; // BBQ
             packetMagic = 0xfbc0b6db; // BBQ, pchMessageStart
             genesisBlock.setDifficultyTarget(0x1e0ffff0L); // BBQ, nBits
